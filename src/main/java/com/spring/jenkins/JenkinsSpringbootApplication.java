@@ -1,4 +1,4 @@
-package com.spring.jenkins.com.spring.jenkins;
+package com.spring.jenkins;
 
 
 import javax.annotation.PostConstruct;
