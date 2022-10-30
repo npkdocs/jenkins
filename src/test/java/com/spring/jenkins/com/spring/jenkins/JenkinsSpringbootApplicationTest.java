@@ -18,7 +18,7 @@ class JenkinsSpringbootApplicationTest {
 	static Logger logger = LoggerFactory.getLogger(JenkinsSpringbootApplicationTest.class);
 	
 	@Test
-	void contextLoads() {
+	void test() {
 		logger.info("--------- Execute Test case -----------------");
 		assertEquals(true, true);
 	}
