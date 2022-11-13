@@ -8,8 +8,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class JenkinsSpringbootApplication {
 	
 	static Logger logger = LoggerFactory.getLogger(JenkinsSpringbootApplication.class);
@@ -24,9 +26,14 @@ public class JenkinsSpringbootApplication {
 		SpringApplication.run(JenkinsSpringbootApplication.class, args);
 	}
 
-	@GetMapping(value = "/test")
+	@GetMapping(value = "/first")
 	public String testMessage() {
 		return "First Spring Boot Jar message";
+	}
+
+	@GetMapping("/")
+	public String contextMessage() {
+		return "Welcome to First Spring Boot";
 	}
 
 }
