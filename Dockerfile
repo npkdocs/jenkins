@@ -3,5 +3,7 @@ FROM openjdk:8-jdk-alpine
 #ARG JAR_FILE=target/spring-boot-docker.jar
 #COPY ${JAR_FILE} spring-boot-docker.jar
 EXPOSE 8090
-ADD target/spring-boot-docker.jar spring-boot-docker.jar
+#ADD target/spring-boot-docker.jar spring-boot-docker.jar
+ARG JAR_FILE
+COPY ${JAR_FILE} spring-boot-docker.jar
 ENTRYPOINT ["java", "-jar", "/spring-boot-docker.jar"]
